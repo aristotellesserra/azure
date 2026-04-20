@@ -8,3 +8,5 @@ venv/
 .build/
 .deploy/
 azure_get_user_groups.py
+*.ipynb
+.oci/
