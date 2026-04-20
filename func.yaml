@@ -1,0 +1,7 @@
+schema_version: 20180708
+name: azure_get_user_groups
+version: 0.0.1
+runtime: python
+entrypoint: python func.py
+memory: 128
+timeout: 30
