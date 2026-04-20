@@ -1,6 +1,6 @@
 [DEFAULT]
 user=ocid1.user.oc1..aaaaaaaatwadg4tiwayv2o4odx3n5gxfizmwj53ffwnumwwdkjacoxyw4vla
 fingerprint=35:1a:cf:af:cb:54:43:23:a6:27:f6:67:1a:38:29:ee
-key_file=C:/Users/aserra/Desktop/Tech/vscode/oci-rest-api/.oci/key.pem
+key_file=C:/Users/aserra/Desktop/Tech/vscode/azure/.oci/key.pem
 tenancy=ocid1.tenancy.oc1..aaaaaaaaoi6b5sxlv4z773boczybqz3h2vspvvru42jysvizl77lky22ijaq
 region=us-ashburn-1
