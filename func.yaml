@@ -2,6 +2,6 @@ schema_version: 20180708
 name: azure_get_user_groups
 version: 0.0.1
 runtime: python
-entrypoint: python func.py
+entrypoint: /python/bin/fdk /function/func.py handler
 memory: 128
 timeout: 30
