@@ -1,5 +1,6 @@
 import json
 import os
+import io
 from urllib.parse import quote
 
 import requests
@@ -35,17 +36,15 @@ def get_user_groups(access_token: str, user_id: str) -> dict:
     return resp.json()
 
 
-def handler(ctx, data=None, headers=None):
-    if isinstance(data, bytes):
-        data = data.decode("utf-8")
-
+def handler(ctx, data: io.BytesIO=None):
+    print("Entering Python handler", flush=True)
     user_id = DEFAULT_USER_ID
-    if data:
-        try:
-            payload = json.loads(data)
-            user_id = payload.get("user_id", user_id)
-        except ValueError:
-            user_id = data or user_id
+    
+    try:
+        payload = json.loads(data.getvalue())
+        user_id = payload.get("user_id")
+    except (Exception, ValueError) as ex:
+        print(str(ex), flush=True)
 
     if not TENANT_ID or not CLIENT_ID or not CLIENT_SECRET:
         return {
